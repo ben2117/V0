@@ -1,4 +1,3 @@
-
 var doubleClick = 0;
 
 var addTime = function(y, x, element)
@@ -35,8 +34,6 @@ var addTime = function(y, x, element)
 		if( command == "createMinion"){
 			createMinion(element);
 		};
-
-		if
 
 		if( command == "move"){
 
