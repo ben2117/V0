@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+        
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- GAME LOGIC -->
+				<!-- generates the grid for the game to be played on -->
+				
+				<script type="text/javascript" src="createGameGrid.js"></script>
+				
+				<!--  Global Variables for the game -->
+				<script type="text/javascript" src="setup.js"></script>
+				
+								
+				
+				<script type="text/javascript" src="cardCommands.js"></script>
+		
+				<script type="text/javascript" src="cardAction.js"></script>
+
+				<script type="text/javascript" src="cardData.js"></script>
+
+				<script type="text/javascript" src="menu.js"></script>
+
+				<script type="text/javascript" src="lightboxRenderor.js"></script>
+
+				<script type="text/javascript" src="highlighting.js"></script>
+
+		
+	</head>
+
+
+
+	<body>
+		
+		<button onclick="endTurn();"> End Turn </button>
+		<button href="#" id="build"> Place New Base</button>
+
+		<div class = "P1Recourses">
+
+		</div>
+		
+		<div class = "P2Recourses">
+
+		</div>
+
+		<div class="lightbox" id="lightbox">Buildings Unavailable</div>
+	</body>
+
+	<!-- gridClicks should always be last, takes the command from setup and applys the logc -->
+
+	<script type="text/javascript" src="moveRender.js"></script>
+
+	<script type="text/javascript" src="postRender.js"></script>
+</html>
