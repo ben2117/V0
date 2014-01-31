@@ -1,4 +1,3 @@
-
 var doubleClick = 0;
 
 var addTime = function(y, x, element)
@@ -41,6 +40,7 @@ var addTime = function(y, x, element)
 			createMinion(element);
 		};
 
+<<<<<<< HEAD
 
 		//FROSTWING UNITS
 		if(command=="theHydroPump"){
@@ -49,6 +49,9 @@ var addTime = function(y, x, element)
 		if(command=="waterSquirel"){
 			waterSquirel(element);
 		}
+=======
+		if( command == "move"){
+>>>>>>> 4306b297b1a98ab3ca0aeafff5b2d38f2b9bc397
 
 		if( command == "move"){
 			move(element);
