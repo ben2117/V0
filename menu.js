@@ -37,6 +37,7 @@ var buildMenu = function(element, y, x){
 		var mainbase = false;
 		var fireAirGenerator = false;
 		var helMinionLab = false;
+		var theHydroPump = false;
 
 		//find cards
 		for(var i = 0; i < cards.length; i++)
@@ -50,6 +51,9 @@ var buildMenu = function(element, y, x){
 			if(cards[i] == "helMinionLab"){
 				helMinionLab = true;
 			}
+			if(cards[i] == "theHydroPump"){
+				theHydroPump = true;
+			}
 		}
 
 		if(clickedCard[0] == "mainbasehel"){
@@ -61,6 +65,8 @@ var buildMenu = function(element, y, x){
 				menuContent += "<button onclick=\"command='helMinionLab'\" style=\"float:right\"> Build Hels Minion Lab </button>";
 			}	
 		}
+
+		//HELSFORTH MENUES
 		if(clickedCard[0] =="fireAirGenerator"){
 			menuContent = "<h2>Fire and Air Generator</h2>";
 			menuContent += Generate(gridx, gridy, "charView");
@@ -78,7 +84,34 @@ var buildMenu = function(element, y, x){
 			menuContent += "</br><button onclick=\"command='move'\" style=\"float:right\"> Move </button>";
 
 		};
+
+		///FROST WING MENUE
+
 	}
+
+	if (currentPlayer.race == "frostwing") {
+		if(clickedCard[0] == "mainbasefro"){
+			oneSpaceHighlighting();
+			menuContent = "<h2>Frost Wing Mannor</h2>";
+			menuContent += Generate(gridx, gridy, "charView");
+			menuContent += "<button onclick=\"command='theHydroPump'\" style=\"float:right\"> Build Hydro Pump </button>";	
+		}
+
+		if(clickedCard[0] == "theHydroPump"){
+			oneSpaceHighlighting();
+			menuContent = "<h2>The Hydro Pump</h2>";
+			menuContent += Generate(gridx, gridy, "charView");
+			menuContent += "<button onclick=\"command='waterSquirel'\" style=\"float:right\">Create Water Squiral</button>";
+		}
+
+		if(clickedCard[0] == "waterSquirel"){
+			oneSpaceHighlighting();
+			menuContent = "<h2>Water Squiral</h2>";
+			menuContent += Generate(gridx, gridy, "charView");
+			menuContent += "</br><button onclick=\"command='move'\" style=\"float:right\"> Move </button>";
+		}
+
+	};
 	
 	ReplaceContentInContainer("lightbox", menuContent);
 	RenderLightbox(clickedCard);

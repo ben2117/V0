@@ -55,5 +55,9 @@ var charactorPropertys = [
 	{
 		name: "HellsMinion",
 		hp: 20
+	},
+	{
+		name: "waterSquirel",
+		hp: 2
 	}
 ]

@@ -19,7 +19,7 @@ var mainBase = function(element){
 	 		}
 	 		if(currentPlayer.race == "frostwing"){
 	 			setup(element);
-	 			document.getElementById(element).innerHTML = "mainbasefro:" + currentPlayer.username + "::::::";
+	 			document.getElementById(element).innerHTML = "mainbasefro:" + currentPlayer.username + ":::::buildingCore:::::::";
 	 			document.getElementById(element).style.backgroundImage="url(assets/mainbasefro.gif)";
 	 		}
 	 	}
@@ -96,7 +96,7 @@ var theHydroPump = function(element){
 		setup(element);
 		document.getElementById(element).innerHTML = "theHydroPump:" + currentPlayer.username
 			+ ":::::buildingCore:::::::";
-		document.getElementById(element).style.backgroundImage="url(assets/theHydroPump.gif"
+		document.getElementById(element).style.backgroundImage="url(assets/theHydroPump.gif)";
 	}
 	else{
 		alert("You cannot build here");
@@ -104,19 +104,31 @@ var theHydroPump = function(element){
 }
 
 
+var waterSquirel = function(element){
+	if (document.getElementById(element).innerHTML == 's') {
+		setup(element);
+		document.getElementById(element).innerHTML = "waterSquirel:" + currentPlayer.username
+			+ "::::::::::::";
+		document.getElementById(element).style.backgroundImage="url(assets/waterSquirel.gif)";
+	}
+	else{
+		alert("There is somthing blocking your squirels way");
+	}
+}
 
-
+///All card actions
 var move = function(element){
 	if (document.getElementById(element).innerHTML == 's' && moveAmount < 1){
 		moveAmount++;
 		var prev = document.getElementById(prevUnitPlacement[1]+prevUnitPlacement[0]);
 		var content = document.getElementById(prevUnitPlacement[1]+prevUnitPlacement[0]).innerHTML;
+		var image = document.getElementById(prevUnitPlacement[1]+prevUnitPlacement[0]).style.backgroundImage;
 		prev.style.background = "white";
 		prev.innerHTML = 't';
-		//prev.style.backgroundImage="none";
+
 		setup(element);
 		document.getElementById(element).innerHTML = content;
-	 	document.getElementById(element).style.backgroundImage="url(assets/minion.gif)";
+	 	document.getElementById(element).style.backgroundImage=image;
 
 	}
 	else{

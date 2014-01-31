@@ -1,0 +1,9 @@
+To add a new card you must
+
+1. Create the cards Action in cardAction.js (rememner to add the : at the end of the name)
+2. Add the gif to the assets folder
+3. Add the base stats of the card in cardData.js
+4. Add the creation button to the card that will create it in menu.js
+5. Create the cards menue in menu.js and add highlighting if nessasary
+6. Add the command delegator to cardCommand.js
+7. If card is a moving object, let it be taken by placeholder in cardCommand.js

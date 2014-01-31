@@ -65,6 +65,7 @@
 				break;
 			}
 		}
+		ReplaceContentInContainer("whosTurn", "It is " + currentPlayer.username +"s turn."); 
 		moveAmount = 0;
 		calculateMove();
 	}

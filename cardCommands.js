@@ -9,6 +9,9 @@ var addTime = function(y, x, element)
 	if(placeholder[0] == "minion"){
 		prevUnitPlacement = [x, y];
 	}
+	if(placeholder[0] == "waterSquirel"){
+		prevUnitPlacement = [x, y];
+	}
 	
 
 
@@ -26,6 +29,8 @@ var addTime = function(y, x, element)
 			//This calls the mainbase command and tells it what is there
 			 mainBase(element);
 		}
+
+		//HELS FORTH UNITS
 		if(command=="fireAirGenerator"){
 			fireAirGenerator(element);
 		}
@@ -36,10 +41,16 @@ var addTime = function(y, x, element)
 			createMinion(element);
 		};
 
-		if
+
+		//FROSTWING UNITS
+		if(command=="theHydroPump"){
+			theHydroPump(element);
+		}
+		if(command=="waterSquirel"){
+			waterSquirel(element);
+		}
 
 		if( command == "move"){
-
 			move(element);
 		}
 		
